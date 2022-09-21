@@ -1,11 +1,21 @@
-package com.example.demo;
+package com.example.demo.entities;
 
+import javax.persistence.*;
 import java.time.LocalDate;
+
+@Entity
+@Table(name = "task")
 
 public class Task {
     // Properties
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name = "description")
     private String description;
+    @Column(name = "done")
     private Boolean done;
+    @Column(name = "dueDate")
     private LocalDate dueDate;
 
     // Constructor
@@ -13,6 +23,9 @@ public class Task {
         this.description = description;
         this.done = done;
         this.dueDate = dueDate;
+    }
+    public Task(){
+
     }
 
     // Getter's & Setter's

@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example.demo.entities;
+
+import com.example.demo.entities.Task;
 
 import java.util.ArrayList;
 import java.util.List;
