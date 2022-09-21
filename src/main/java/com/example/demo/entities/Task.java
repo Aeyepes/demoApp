@@ -10,7 +10,7 @@ public class Task {
     // Properties
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    public long id;
     @Column(name = "description")
     private String description;
     @Column(name = "done")
